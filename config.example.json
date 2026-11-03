@@ -7,7 +7,7 @@
   "show_error": true,
   "log_level": "INFO",
 
-  "applio_dir": "D:\\dsh项目\\ApplioV3.6.5",
+  "applio_dir": "",
   "model_dirs": ["logs"],
   "extra_model_dirs": [],
 

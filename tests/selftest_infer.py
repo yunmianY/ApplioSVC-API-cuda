@@ -5,7 +5,11 @@ import sys
 import time
 
 PROJECT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-APPLIO_DIR = os.environ.get("APPLIO_DIR") or r"D:\dsh项目\ApplioV3.6.5"
+sys.path.insert(0, PROJECT_DIR)
+
+from core.paths import discover_applio_dir  # noqa: E402
+
+APPLIO_DIR = os.environ.get("APPLIO_DIR") or str(discover_applio_dir())
 
 VOCAL = os.path.join(PROJECT_DIR, "temp", "_selftest_sep", "vocal_reference.wav_10.wav")
 MODEL = os.path.join(APPLIO_DIR, "logs", "luotianyi_song", "FeiyuVoice-RVC-v1.pth")

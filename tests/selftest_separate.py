@@ -10,7 +10,13 @@ sys.path.insert(0, PROJECT_DIR)
 import torch  # noqa: E402
 from uvr5.vr import AudioPre  # noqa: E402
 
-SRC = r"D:\dsh项目\ApplioV3.6.5\logs\reference\reference.wav"
+from core.paths import discover_applio_dir  # noqa: E402
+
+APPLIO_DIR = os.environ.get("APPLIO_DIR") or str(discover_applio_dir())
+# 用 Applio 自带的示例音频做测试；也可以把自己的音频路径作为第一个参数传入
+SRC = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
+    APPLIO_DIR, "logs", "reference", "reference.wav"
+)
 MODEL = os.path.join(PROJECT_DIR, "models", "uvr5", "5_HP-Karaoke-UVR.pth")
 OUT = os.path.join(PROJECT_DIR, "temp", "_selftest_sep")
 

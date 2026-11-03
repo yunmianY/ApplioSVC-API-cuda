@@ -339,7 +339,7 @@ site-packages** 排在它自己的 `Lib\site-packages` 前面：
 
 ```
 C:\Users\<你>\AppData\Roaming\Python\Python312\site-packages   ← 实际生效（gradio 5.49.1 / torch 2.7.0+cu126）
-D:\dsh项目\ApplioV3.6.5\env\Lib\site-packages                  ← 被遮蔽（gradio 6.20.0 / torch 2.11.0+cu128）
+<你的 Applio 目录>\env\Lib\site-packages                      ← 被遮蔽（gradio 6.20.0 / torch 2.11.0+cu128）
 ```
 
 服务启动时会打印 `Gradio <版本> <- <路径>`，方便确认用的是哪一套。**不要在这个环境里
