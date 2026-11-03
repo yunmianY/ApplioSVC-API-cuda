@@ -1,0 +1,43 @@
+{
+  "host": "127.0.0.1",
+  "rvc_port": 3333,
+  "svc_port": 9999,
+  "queue_size": 40,
+  "share": false,
+  "show_error": true,
+  "log_level": "INFO",
+
+  "applio_dir": "D:\\dsh项目\\ApplioV3.6.5",
+  "model_dirs": ["logs"],
+  "extra_model_dirs": [],
+
+  "uvr5_model": "models/uvr5/5_HP-Karaoke-UVR.pth",
+  "uvr5_device": "auto",
+  "uvr5_half": true,
+  "uvr5_agg": 10,
+  "uvr5_tta": false,
+  "uvr5_postprocess": false,
+  "uvr5_window_size": 512,
+  "uvr5_high_end_process": "mirroring",
+
+  "volume_envelope": 0.25,
+  "protect": 0.33,
+  "default_f0_method": "rmvpe",
+  "max_audio_seconds": 330,
+
+  "output_bitrate": "320k",
+  "cache_max_files": 200,
+  "ffmpeg_path": "",
+
+  "netease_api_base": "http://127.0.0.1:3000",
+  "netease_cookie": "MUSIC_U=这里填你登录后拿到的值",
+  "netease_level": "exhigh",
+
+  "download_sources": [
+    "https://music.163.com/song/media/outer/url?id={song_id}.mp3",
+    "https://biliplayer.91vrchat.com/player/?url=https://music.163.com/song?id={song_id}",
+    "https://music-api.gdstudio.xyz/api.php?types=url&source=netease&id={song_id}&br=320",
+    "https://api.vkeys.cn/v2/music/netease?id={song_id}"
+  ],
+  "download_timeout": 30
+}

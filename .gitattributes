@@ -1,0 +1,7 @@
+# 统一换行，避免 Windows 上 .bat 被转成 LF 后 cmd 解析异常
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.txt text eol=lf

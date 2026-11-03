@@ -1,0 +1,22 @@
+# ApplioSVC-API（CUDA 版）运行依赖
+#
+# 推荐直接使用 Applio 自带的 env（已经装好 torch/CUDA/transformers 等），
+# 只把本文件当作「独立部署」时的参考清单。
+#
+#   ..\ApplioV3.6.5\env\python.exe app_rvc.py
+#
+# 若要从零建环境，先按你的 CUDA 版本安装 PyTorch：
+#   pip install torch torchaudio --index-url https://download.pytorch.org/whl/cu126
+# 再安装下面这些：
+gradio>=5.0,<6.0
+fastapi>=0.110
+uvicorn>=0.30
+python-multipart>=0.0.9
+librosa>=0.10
+soundfile>=0.12
+pydub>=0.25
+pedalboard>=0.9
+numpy>=2.0
+scipy>=1.13
+requests>=2.31
+tqdm>=4.66
